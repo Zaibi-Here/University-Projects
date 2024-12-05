@@ -1,0 +1,103 @@
+Basics settings of all swiches and routers
+en
+conf t
+
+hostname JTL ISP
+
+enable password cisco
+
+line console 0
+password 'cisco'
+login 
+exit
+
+
+banner motd #NO UNAUTHORISED ACCESS!!!!#
+
+no ip domain lookup
+
+service password-encryption
+
+username cisco password cisco
+ip domain-name cisco.com
+
+crypto key generate rsa
+1024
+
+ip ssh version 2
+
+line vty 0 15
+login local
+transport input ssh
+exit
+
+do wr
+
+
+----------------------------------------
+CREATE VLANS
+#change vlan id for each
+
+vlan 50
+name DATA
+vlan 120
+name VOICE
+exit
+
+int range fa0/1-2
+switchport mode trunk
+exit
+
+int range fa0/3-24
+switchport mode access 
+switchport access vlan 50
+switchport voice vlan 120
+exit
+
+do wr
+-----------------------------------------
+create vlans in HQMS1 and HQMS2
+
+vlan 10
+name HR
+vlan 20
+name CS
+vlan 30
+name MK
+vlan 40
+name LM
+vlan 50
+name IT
+vlan 120
+name VOICE
+exit
+
+do wr
+
+----------------------------------------
+inter vlans in multilevel switches
+
+int vlan 10
+ip address 192.168.20.1 255.255.255.192
+ip helper-address 192.168.21.5
+exit
+
+int vlan 20
+ip address 192.168.20.65 255.255.255.192
+ip helper-address 192.168.21.5
+exit
+
+int vlan 30
+ip address 192.168.20.129 255.255.255.192
+ip helper-address 192.168.21.5
+exit
+
+int vlan 40
+ip address 192.168.20.193 255.255.255.224
+ip helper-address 192.168.21.5
+exit
+
+int vlan 50
+ip address 192.168.20.225 255.255.255.224
+ip helper-address 192.168.21.5
+exit
