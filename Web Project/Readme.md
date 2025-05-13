@@ -27,7 +27,7 @@ UrbanHarvest is a simple yet complete online grocery store that allows users to 
 
 ### 1. Clone or Download the Project
 ```
-git clone https://github.com/davidwarnerx/urbanharvest
+git clone https://github.com/Zaibi-Here/University-Projects.git
 ```
 
 ### 2. Move Project to Local Server Directory
