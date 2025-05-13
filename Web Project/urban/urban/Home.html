@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanHarvest - Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1,
+      h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+        font-size: 40px;
+      }
+
+      body,
+      p {
+        font-family: "Raleway", sans-serif;
+        font-size: medium;
+        font-weight: bold;
+      }
+
+      header {
+        background-color: #618264;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+      }
+      nav {
+        background-color: #516d53;
+        padding: 15px;
+        text-align: center;
+      }
+      .nav-container a {
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .nav-container a:hover {
+        text-decoration: underline;
+      }
+
+      .cart-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: white;
+        color: #618264;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .main-slider {
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+      }
+
+      .main-slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .slider-content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .slider-content p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .slider-content button {
+        background-color: #618264;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .category-container,
+      .products-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+      }
+
+      .category-container a,
+      .products-container a {
+        flex: 0 0 18%;
+        min-width: 200px;
+        text-decoration: none;
+        color: inherit;
+        margin-bottom: 20px;
+      }
+
+      .category-container div,
+      .products-container div {
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+
+      .category-container div:hover,
+      .products-container div:hover {
+        transform: translateX(-5px);
+      }
+
+      .category-container img,
+      .products-container img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .products-container button {
+        margin-top: 10px;
+        background-color: #618264;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #618264;
+        color: white;
+        padding: 20px;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .footer-inner div {
+        flex: 1;
+        margin: 10px;
+      }
+      .footer-inner a {
+        color: #ccc;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
+      .footer-inner a:hover {
+        text-decoration: underline;
+      }
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #444;
+        padding-top: 10px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .category-container a,
+        .products-container a {
+          width: 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .category-container a,
+        .products-container a {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>UrbanHarvest</h1>
+      <p>Farm-fresh groceries at your doorstep</p>
+      <a href="cart.php" class="cart-btn">Cart 🛒</a>
+    </header>
+    <nav>
+      <div class="nav-container">
+        <a href="Home.html">Home</a>
+        <a href="shop.php">Shop</a>
+        <a href="about.php">About Us</a>
+        <a href="contact.php">Contact Us</a>
+        <a href="orders.php">Orders</a>
+        <a href="index.php">Logout</a>
+      </div>
+    </nav>
+
+    <section class="main-slider">
+      <img id="slider-image" src="images/slide1.jpg" alt="Slider" />
+      <div class="slider-content">
+        <h1>Fresh Groceries Delivered Daily</h1>
+        <p>Get 10% off on your purchase. Use code SAVE10 at checkout.</p>
+        <button onclick="location.href='shop.html'">Shop Now</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Shop by Category</h2>
+      <div class="category-container">
+        <a href="shop.html#fruits">
+          <div>
+            <img src="images/fruitandveges.jpg" alt="Fruits & Vegetables" />
+            <p>Fruits & Vegetables</p>
+          </div>
+        </a>
+        <a href="shop.php#dairy">
+          <div>
+            <img src="images/dairy.jpg" alt="Dairy" />
+            <p>Dairy & Eggs</p>
+          </div>
+        </a>
+        <a href="shop.php#grains">
+          <div>
+            <img src="images/grains.jpg" alt="Grains" />
+            <p>Grains & Staples</p>
+          </div>
+        </a>
+        <a href="shop.php#toiletries">
+          <div>
+            <img src="images/toiletries.jpg" alt="Toiletries" />
+            <p>Toiletries</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Latest Products</h2>
+      <div class="products-container">
+        <a href="shop.php#apple">
+          <div>
+            <img src="images/apple.jpg" alt="Organic Apple" />
+            <p>Organic Apples - 300/kg</p>
+            <button>Add to Cart</button>
+          </div>
+        </a>
+        <a href="shop.php#milk">
+          <div>
+            <img src="images/milk.jpg" alt="Fresh Milk" />
+            <p>Farm Fresh Milk - 180/L</p>
+            <button>Add to Cart</button>
+          </div>
+        </a>
+        <a href="shop.php#moisturizer">
+          <div>
+            <img src="images/moisturizer.png" alt="Moisturizer" />
+            <p>Moisturizer - 800</p>
+            <button>Add to Cart</button>
+          </div>
+        </a>
+        <a href="shop.php#eggs">
+          <div>
+            <img src="images/eggs.jpg" alt="Organic Eggs" />
+            <p>Organic Eggs (12 pack) - 360</p>
+            <button>Add to Cart</button>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <h4>Quick Links</h4>
+          <a href="Home.html">Home</a>
+          <a href="about.php">About Us</a>
+          <a href="contact.php">Contact Us</a>
+          <a href="cart.php">Cart</a>
+          <a href="shop.php">Shop</a>
+        </div>
+        <div>
+          <h4>Customer Care</h4>
+          <a href="index.php">Login</a>
+          <a href="#">Orders</a>
+          <a href="#">Help</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>📞 +92-333-1234567</p>
+          <p>✉ support@urbanharvest.com</p>
+          <p>📍 Peshawar, Pakistan</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 UrbanHarvest. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+      const sliderImages = [
+        "images/slide1.jpg", 
+        "images/rice.png",
+        "images/pomegranate.png",
+        "images/capsicum.jpg",
+        "images/tomato.jpg",
+        "images/potato.jpg",
+        "images/grapes.jpg",
+        "images/grains.jpg",
+      ];
+
+      let current = 0;
+
+      //Show the first image immediately                          //lekin yeh kam nahi kr rahahahaha
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("slider-image").src = sliderImages[current];
+
+        //Starting the slider
+        setInterval(() => {
+          current = (current + 1) % sliderImages.length;
+          document.getElementById("slider-image").src = sliderImages[current];
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

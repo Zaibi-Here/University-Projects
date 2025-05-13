@@ -1,0 +1,102 @@
+/* style.css */
+
+header {
+    background-color: #618264;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  nav {
+    background-color: #516d53;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .nav-container a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .cart-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    color: #618264;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #618264;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-inner div {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-inner a {
+    color: #ccc;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .footer-inner a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Optional font styles */
+  h1, h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  
+  body, p {
+    font-family: "Raleway", sans-serif;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .category-container a,
+    .products-container a {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category-container a,
+    .products-container a {
+      width: 90%;
+    }
+  }
+  
